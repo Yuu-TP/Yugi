@@ -93,3 +93,52 @@
         /* Hiệu ứng gió thổi nhẹ */
         .flower {
             animation: sway 3s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        /* Màu sắc khác nhau cho các bông hoa */
+        .flower:nth-child(2) .petal { background: #ff4500; }
+        .flower:nth-child(3) .petal { background: #ffffff; }
+        .flower:nth-child(4) .petal { background: #9370db; }
+    </style>
+</head>
+<body>
+
+<div class="garden">
+    <div class="flower">
+        <div class="petals">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem">
+            <div class="leaf"></div>
+            <div class="leaf right"></div>
+        </div>
+    </div>
+
+    <div class="flower">
+        <div class="petals"><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="center"></div></div>
+        <div class="stem"><div class="leaf"></div></div>
+    </div>
+
+    <div class="flower">
+        <div class="petals"><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="center"></div></div>
+        <div class="stem"><div class="leaf right"></div></div>
+    </div>
+
+    <div class="flower">
+        <div class="petals"><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="center"></div></div>
+        <div class="stem"><div class="leaf"></div><div class="leaf right"></div></div>
+    </div>
+</div>
+
+</body>
+</html>
