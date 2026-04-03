@@ -1,1 +1,95 @@
-<div> class="flower___light--1, flower___light--2, flower___light--3, flower___light--4, flower___leafs--1, flower___leafs::after" </div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vườn Hoa Của Tôi</title>
+    <style>
+        /* Thiết lập nền vườn */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB 60%, #567d46 60%);
+            overflow: hidden;
+        }
+
+        .garden {
+            display: flex;
+            gap: 50px;
+            padding-bottom: 20px;
+        }
+
+        /* Cấu trúc một bông hoa */
+        .flower {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Cánh hoa */
+        .petals {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+
+        .petal {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #ff69b4; /* Màu cánh hoa */
+            border-radius: 50% 50% 0 50%;
+            transform-origin: bottom right;
+        }
+
+        /* Xoay các cánh hoa */
+        .petal:nth-child(1) { transform: rotate(0deg); }
+        .petal:nth-child(2) { transform: rotate(90deg); }
+        .petal:nth-child(3) { transform: rotate(180deg); }
+        .petal:nth-child(4) { transform: rotate(270deg); }
+
+        /* Nhụy hoa */
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+            background: yellow;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        /* Thân cây */
+        .stem {
+            width: 6px;
+            height: 100px;
+            background: #2d5a27;
+            margin-top: -5px;
+            border-radius: 3px;
+        }
+
+        /* Lá cây */
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 10px;
+            background: #2d5a27;
+            border-radius: 0 10px 0 10px;
+            top: 60px;
+            left: 6px;
+        }
+
+        .leaf.right {
+            left: -20px;
+            border-radius: 10px 0 10px 0;
+        }
+
+        /* Hiệu ứng gió thổi nhẹ */
+        .flower {
+            animation: sway 3s ease-in-out infinite;
