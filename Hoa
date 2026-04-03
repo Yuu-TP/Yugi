@@ -1,0 +1,30 @@
+.flower___light--1 {
+	left: -2vmin;
+	animation-delay: 1s;
+}
+.flower___light--2 {
+	left: 3vmin;
+	animation-delay: 0.5s;
+}
+.flower___light--4 {
+	left: -6vmin;
+	animation-delay: 0.3s;
+}
+.flower___light--4 {
+	left: -1vmin;
+	animation-delay: 1.5s;
+}
+.flower___leafs--1 {
+	animation-delay: 1.1s;
+}
+.flower___leafs::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	transfrom: translate(-50%,-100%);
+	width: 8vmin;
+	height: 8vmin;
+	background-color: #ff219b;
+	filter: bulr(10vmin);
+}
